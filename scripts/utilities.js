@@ -27,10 +27,10 @@ function addHistory(amount,btnId) {
 
     // Create a new paragraph element to hold the donate amount and reason
     const newAmountElement = document.createElement("p");
-    if(btnId === 'donationBtn1'){
+    if(btnId == 'donateBtn1'){
         newAmountElement.innerText = amount + ' Taka Donated For Flood Relief at Noakhali, Bangladesh';
     }
-    else if(btnId === 'donationBtn2'){
+    else if(btnId == 'donateBtn2'){
         newAmountElement.innerText = amount + ' Taka Donated For Flood Relief at Feni, Bangladesh';
     }
     else{
