@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="text-center">
+        <!-- Button to display the current date and time -->
+        <button 
+            onclick="displayDate()" 
+            class="px-6 py-2 bg-indigo-500 text-white font-semibold rounded hover:bg-indigo-600 transition">
+            Show Current Time
+        </button>
+        
+        <!-- Container for displaying the current date and time -->
+        <div id="dateContainer" class="mt-4 text-lg font-semibold text-gray-700"></div>
+    </div>
+
+    <script>
+        // Function to get and display the current date and time
+
+        function displayDate() {
+            const date = new Date();
+            const formattedDate = `Date : ${date.toString()}`;
+
+            // Create a new paragraph element to hold the date
+            const newDateElement = document.createElement("p");
+            newDateElement.innerText = formattedDate;
+
+            // Append the new date element to the dateContainer div
+            document.getElementById("dateContainer").appendChild(newDateElement);
+        }
+    </script>
+</body>
+</html>

@@ -55,12 +55,14 @@
             </div>
         </nav>
         <div class="flex gap-4 py-6 justify-center">
-            <button class="btn text-xl bg-green border-lime-300">Donation</button>
-            <button class="btn text-xl text-gray border border-gray-400">History</button>
+            <!-- <button id="donationBtn" class="btn text-xl bg-green border-lime-300">Donation</button>
+            <button id="historyBtn" class="btn text-xl text-gray border border-gray-400">History</button> -->
+            <button id="donationBtn" class="btn text-xl bg-green">Donation</button>
+            <button id="historyBtn" class="btn text-xl">History</button>
         </div>
     </header>
     <main class="mt-52">
-        <div class="flex flex-col gap-8 max-w-6xl mx-auto px-4">
+        <div id="donation" class="flex flex-col gap-8 max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row gap-8 p-8 border rounded-2xl">
                 <div class="w-full md:w-1/2">
                     <img class="w-full" src="assets/noakhali.png" alt="">
@@ -222,7 +224,7 @@
             </dialog>
 
         </div>
-        <div class="flex flex-col gap-6 max-w-6xl mx-auto px-4">
+        <div id="history" class="hidden flex flex-col gap-6 max-w-6xl mx-auto px-4">
             <div class="rounded-2xl border p-8">
                 <p class="text-xl font-bold"><span>96500</span> Taka is Donated for famine-2024 at Feni, Bangladesh</p>
                 <p class="text-[16px] font-light">
@@ -260,7 +262,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex flex-col gap-6 max-w-6xl mx-auto px-4">
+        <div id="faq" class="hidden flex flex-col gap-6 max-w-6xl mx-auto px-4">
             <div class="flex items-center gap-2">
                 <h2 class="text-3xl font-semibold ml-1">Important FAQ</h2>
                 <svg class="w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -300,13 +302,13 @@
             </div>
         </div>
     </main>
-    <footer>
-
+    <footer class="mt-8 h-24 w-full bg-[#f9f7f3f1]">
     </footer>
 
     <script src="scripts/utilities.js"></script>
     <script src="scripts/donation.js"></script>
     <script src="scripts/blog.js"></script>
+    <script src="scripts/tabSwitch.js"></script>
 </body>
 
 </html>

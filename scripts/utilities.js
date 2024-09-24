@@ -31,9 +31,13 @@ function donation(btnId, valueId, fund){
         else{
             if(isNaN(donateAmount) || donateAmount<=0){
                 my_modal_2.showModal();
+                // Clear the input field after operation
+                document.getElementById(valueId).value = '';
             }
             else{
                 my_modal_3.showModal();
+                // Clear the input field after operation
+                document.getElementById(valueId).value = '';
             }
         }
     });
