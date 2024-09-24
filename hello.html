@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Date Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="text-center">
-        <!-- Button to display the current date and time -->
-        <button 
-            onclick="displayDate()" 
-            class="px-6 py-2 bg-indigo-500 text-white font-semibold rounded hover:bg-indigo-600 transition">
-            Show Current Time
-        </button>
-        
-        <!-- Container for displaying the current date and time -->
-        <div id="dateContainer" class="mt-4 text-lg font-semibold text-gray-700"></div>
+        <input class="outline" type="text" name="" id="num">
+      <!-- Button to display the current date and time -->
+      <button
+        onclick="displayDate()"
+        class="px-6 py-2 bg-indigo-500 text-white font-semibold rounded hover:bg-indigo-600 transition"
+      >
+        Show Current Time
+      </button>
+
+      <!-- Container for displaying the current date and time -->
+      <div id="history" class="mt-4 font-semibold"></div>
     </div>
 
     <script>
-        // Function to get and display the current date and time
+      // Function to get and display the current date and time
 
-        function displayDate() {
-            const date = new Date();
-            const formattedDate = `Date : ${date.toString()}`;
+      function displayDate() {
+        // Create a new paragraph element to hold the date
+        const date = new Date();
+        const formattedDate = `Date : ${date.toString()}`;
 
-            // Create a new paragraph element to hold the date
-            const newDateElement = document.createElement("p");
-            newDateElement.innerText = formattedDate;
+        const amount = document.getElementById("num").value;
+        const newAmountElement = document.createElement("p");
+        newAmountElement.innerText = amount;
 
-            // Append the new date element to the dateContainer div
-            document.getElementById("dateContainer").appendChild(newDateElement);
-        }
+        const newDateElement = document.createElement("p");
+        newDateElement.innerText = formattedDate;
+        newDateElement.classList.add("font-light", "text-[16px]");
+
+        const newHistory = document.createElement("div");
+
+        newHistory.classList.add("rounded-2xl", "border", "p-8");
+        newHistory.appendChild(newAmountElement);
+        newHistory.appendChild(newDateElement);
+        // Append the new date element to the dateContainer div
+        document.getElementById("history").appendChild(newHistory);
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -1,11 +1,8 @@
-// Get buttons and text elements
 const donationBtn = document.getElementById('donationBtn');
 const historyBtn = document.getElementById('historyBtn');
 
 const donationTab = document.getElementById('donation');
 const historyTab = document.getElementById('history');
-
-
 
 
 function showTab(btnId, tabId) {
@@ -20,7 +17,7 @@ function showTab(btnId, tabId) {
     // Add button active states styles
     btnId.classList.add('bg-green');
 
-    // Show tab
+    // Show required tab
     tabId.classList.remove('hidden');
 }
 
