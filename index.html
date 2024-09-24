@@ -169,6 +169,7 @@
             </div>
             <!-- Popup modal -->
             <!-- onclick="my_modal_1.showModal()" -->
+             <!-- success modal -->
             <dialog id="my_modal_1" class="modal">
                 <div class="modal-box">
                     <h3 class="text-2xl text-center font-bold">Congrates!</h3>
@@ -185,6 +186,41 @@
                     </div>
                 </div>
             </dialog>
+            
+            <!-- error modal -->
+            <dialog id="my_modal_2" class="modal">
+                <div class="modal-box">
+                    <h3 class="text-2xl text-center font-bold">Invalid Amount!</h3>
+                    <svg class="w-8 mx-auto mt-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="#ff0000" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
+                    </svg>
+                    <p class="text-[1rem] text-gray font-light text-center py-4">Please, Enter a valid number.</p>
+                    <div class="modal-action flex justify-center"">
+                    <form action=" #" method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                         <!-- form action="#" so that onclick the close button the page dont get reloads -->
+                        <button class="btn">Retry</button>
+                    </form>
+                    </div>
+                </div>
+            </dialog>
+
+            <!-- insufficient modal -->
+            <dialog id="my_modal_3" class="modal">
+                <div class="modal-box">
+                    <h3 class="text-2xl text-center font-bold">Donation Failed!</h3>
+                    <img class="w-16 mx-auto" src="assets/no-money.png" alt="">
+                    <p class="text-[1rem] text-gray font-light text-center py-4">Insufficient Balance.</p>
+                    <div class="modal-action flex justify-center"">
+                    <form action=" #" method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                         <!-- form action="#" so that onclick the close button the page dont get reloads -->
+                        <button class="btn">Retry</button>
+                    </form>
+                    </div>
+                </div>
+            </dialog>
+
         </div>
         <div class="flex flex-col gap-6 max-w-6xl mx-auto px-4">
             <div class="rounded-2xl border p-8">

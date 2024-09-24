@@ -1,12 +1,12 @@
 function getValueFromInput(id){
     const inputValue = document.getElementById(id).value;
-    const numberValue = parseFloat(inputValue);
+    const numberValue = Number(inputValue);
     return numberValue;
 }
 
 function getValueFromText(id){
     const textValue = document.getElementById(id).innerText;
-    const numberValue = parseFloat(textValue);
+    const numberValue = Number(textValue);
     return numberValue;
 }
 
@@ -28,16 +28,13 @@ function donation(btnId, valueId, fund){
             document.getElementById(valueId).value = '';
             my_modal_1.showModal();            
         }
-        
         else{
             if(isNaN(donateAmount) || donateAmount<=0){
-                window.alert('Enter a valid number');
+                my_modal_2.showModal();
             }
             else{
-                window.alert('Insufficient Balance');
+                my_modal_3.showModal();
             }
         }
-        console.log(donateAmount);
-        
     });
 }
