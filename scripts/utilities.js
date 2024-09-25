@@ -23,7 +23,7 @@ function addHistory(amount,btnId) {
     const formattedDate = `Date : ${date.toString()}`;
     const newDateElement = document.createElement("p");
     newDateElement.innerText = formattedDate;
-    newDateElement.classList.add("font-light", "text-[16px]");
+    newDateElement.classList.add("font-light", "text-base");
 
     // Create a new paragraph element to hold the donate amount and reason
     const newAmountElement = document.createElement("p");
